@@ -1,0 +1,52 @@
+{
+  "applications": ["LVProject"],
+  "changelogDate": "20231017161028",
+  "clientRootFolder": "LVProject",
+  "databaseType": "sql",
+  "dto": "mapstruct",
+  "embedded": false,
+  "entityTableName": "don_xuat",
+  "fields": [
+    {
+      "fieldName": "ngayLap",
+      "fieldType": "Instant",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "tongTienHang",
+      "fieldType": "Long",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "ghiChu",
+      "fieldType": "String"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "microserviceName": "LVProject",
+  "name": "DonXuat",
+  "pagination": "infinite-scroll",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "nhaCungCap",
+      "otherEntityRelationshipName": "donXuat",
+      "relationshipName": "nhaCungCap",
+      "relationshipType": "many-to-one"
+    },
+    {
+      "otherEntityName": "nhaKho",
+      "otherEntityRelationshipName": "donXuat",
+      "relationshipName": "nhaKho",
+      "relationshipType": "many-to-one"
+    },
+    {
+      "otherEntityName": "taiKhoan",
+      "otherEntityRelationshipName": "donXuat",
+      "relationshipName": "taiKhoan",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "service": "serviceClass"
+}

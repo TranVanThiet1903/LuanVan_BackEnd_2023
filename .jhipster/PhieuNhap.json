@@ -1,0 +1,95 @@
+{
+  "applications": ["LVProject"],
+  "changelogDate": "20231017160628",
+  "clientRootFolder": "LVProject",
+  "databaseType": "sql",
+  "dto": "mapstruct",
+  "embedded": false,
+  "entityTableName": "phieu_nhap",
+  "fields": [
+    {
+      "fieldName": "ngayLap",
+      "fieldType": "Instant",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "tongTienHang",
+      "fieldType": "Long",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "vAT",
+      "fieldType": "Long",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "phiShip",
+      "fieldType": "Long",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "giamGia",
+      "fieldType": "Long",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "tongTienThanhToan",
+      "fieldType": "Long",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "tienNo",
+      "fieldType": "Long",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "ghiChu",
+      "fieldType": "String"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "microserviceName": "LVProject",
+  "name": "PhieuNhap",
+  "pagination": "infinite-scroll",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "chiTietPhieuNhap",
+      "otherEntityRelationshipName": "phieuNhap",
+      "relationshipName": "chiTietPhieuNhap",
+      "relationshipType": "one-to-many"
+    },
+    {
+      "otherEntityName": "donNhap",
+      "otherEntityRelationshipName": "phieuNhap",
+      "relationshipName": "donNhap",
+      "relationshipType": "one-to-many"
+    },
+    {
+      "otherEntityName": "chiTietDonXuat",
+      "otherEntityRelationshipName": "phieuNhap",
+      "relationshipName": "chiTietDonXuat",
+      "relationshipType": "one-to-many"
+    },
+    {
+      "otherEntityName": "nhaCungCap",
+      "otherEntityRelationshipName": "phieuNhap",
+      "relationshipName": "nhaCungCap",
+      "relationshipType": "many-to-one"
+    },
+    {
+      "otherEntityName": "nhaKho",
+      "otherEntityRelationshipName": "phieuNhap",
+      "relationshipName": "nhaKho",
+      "relationshipType": "many-to-one"
+    },
+    {
+      "otherEntityName": "taiKhoan",
+      "otherEntityRelationshipName": "phieuNhap",
+      "relationshipName": "taiKhoan",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "service": "serviceClass"
+}

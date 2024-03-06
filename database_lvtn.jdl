@@ -1,0 +1,133 @@
+
+
+
+
+application {
+	config {
+    	applicationType microservice
+        authenticationType jwt
+        baseName LVProject
+        buildTool maven
+        cacheProvider redis
+        databaseType sql
+        devDatabaseType mysql
+        prodDatabaseType mysql
+        packageName warehouse.management.app
+        serverPort 8081
+        serviceDiscoveryType no
+    }
+    entities *
+}
+
+entity TaiKhoan {
+	hoTen String required
+    username String required
+    password String required
+    ngayTao Instant required
+    salt Long required
+}
+
+entity NhaCungCap {
+	tenNCC String required
+	soDT String required
+	email String required
+	diaChi String required
+	ghiChu String required
+}
+
+entity NhomNguyenLieu {
+	tenNhom String required
+}
+
+entity NguyenLieu {
+	hinhAnh String required
+    tenNguyenLieu String required
+	giaNhap Long required
+    moTa String required
+    donViTinh String required
+    vAT Long required
+}
+
+entity NhaKho {
+	tenKho String required
+	diaChi String required	
+	loai String required
+	ngayTao Instant required
+}
+
+entity ChiTietKho {
+	soLuong Long required
+}
+
+entity PhieuNhap {
+    ngayLap Instant required
+    tongTienHang Long required
+    vAT Long required
+    phiShip Long required
+    giamGia Long required
+    tongTienThanhToan Long required
+    tienNo Long required
+    ghiChu String 
+}
+
+entity ChiTietPhieuNhap {
+    soLuong Long required
+    thanhTien Long required
+}
+
+entity DonNhap {
+    ngayLap Instant required
+    tongTienHang Long required
+    vAT Long required
+    phiShip Long required
+    giamGia Long required
+    tongTienThanhToan Long required
+    tienNo Long required
+    ghiChu String 
+}
+
+entity ChiTietDonNhap {
+    soLuong Long required
+    thanhTien Long required
+}
+
+entity DonXuat {
+    ngayLap Instant required
+    tongTienHang Long required
+    ghiChu String 
+}
+
+entity ChiTietDonXuat {
+    soLuong Long required
+    thanhTien Long required
+}
+
+relationship OneToMany {
+    NhomNguyenLieu to NguyenLieu
+    NhaCungCap to NguyenLieu
+    NhaKho to ChiTietKho
+    NguyenLieu to ChiTietKho
+    
+    NhaCungCap to PhieuNhap
+    NhaKho to PhieuNhap
+    PhieuNhap to ChiTietPhieuNhap
+    NguyenLieu to ChiTietPhieuNhap
+    TaiKhoan to PhieuNhap
+    
+    NhaCungCap to DonNhap
+    PhieuNhap to DonNhap
+    NhaKho to DonNhap
+    DonNhap to ChiTietDonNhap
+    TaiKhoan to DonNhap
+    NguyenLieu to ChiTietDonNhap
+    
+    NhaCungCap to DonXuat
+    NhaKho to DonXuat
+    PhieuNhap to ChiTietDonXuat
+    NguyenLieu to ChiTietDonXuat
+    TaiKhoan to DonXuat
+}
+
+dto * with mapstruct
+service * with serviceClass
+paginate * with infinite-scroll

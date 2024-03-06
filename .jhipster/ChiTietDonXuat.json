@@ -1,0 +1,42 @@
+{
+  "applications": ["LVProject"],
+  "changelogDate": "20231017161128",
+  "clientRootFolder": "LVProject",
+  "databaseType": "sql",
+  "dto": "mapstruct",
+  "embedded": false,
+  "entityTableName": "chi_tiet_don_xuat",
+  "fields": [
+    {
+      "fieldName": "soLuong",
+      "fieldType": "Long",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "thanhTien",
+      "fieldType": "Long",
+      "fieldValidateRules": ["required"]
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "microserviceName": "LVProject",
+  "name": "ChiTietDonXuat",
+  "pagination": "infinite-scroll",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "phieuNhap",
+      "otherEntityRelationshipName": "chiTietDonXuat",
+      "relationshipName": "phieuNhap",
+      "relationshipType": "many-to-one"
+    },
+    {
+      "otherEntityName": "nguyenLieu",
+      "otherEntityRelationshipName": "chiTietDonXuat",
+      "relationshipName": "nguyenLieu",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "service": "serviceClass"
+}

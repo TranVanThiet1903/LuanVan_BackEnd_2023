@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-latest.xsd
+                        http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
+
+    <changeSet id="20231017160828-1" author="jhipster">
+<!--        <addColumn tableName="don_nhap">-->
+<!--            <column name="trang_thai" type="varchar(45)"></column>-->
+<!--        </addColumn>-->
+        <addColumn tableName="don_nhap">
+            <column name="tai_khoan_xac_nhan_id" type="${uuidType}"></column>
+        </addColumn>
+        <addForeignKeyConstraint baseColumnNames="tai_khoan_xac_nhan_id"
+                                 baseTableName="don_nhap"
+                                 constraintName="fk_don_nhap__tai_khoan_xac_nhan_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="tai_khoan"/>
+<!--        <addColumn tableName="don_xuat">-->
+<!--            <column name="trang_thai" type="varchar(45)"></column>-->
+<!--        </addColumn>-->
+        <addColumn tableName="don_xuat">
+            <column name="tai_khoan_xac_nhan_id" type="${uuidType}"></column>
+        </addColumn>
+        <addForeignKeyConstraint baseColumnNames="tai_khoan_xac_nhan_id"
+                                 baseTableName="don_xuat"
+                                 constraintName="fk_don_xuat__tai_khoan_xac_nhan_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="tai_khoan"/>
+    </changeSet>
+</databaseChangeLog>

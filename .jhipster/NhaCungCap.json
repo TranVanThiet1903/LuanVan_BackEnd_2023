@@ -1,0 +1,69 @@
+{
+  "applications": ["LVProject"],
+  "changelogDate": "20231017160128",
+  "clientRootFolder": "LVProject",
+  "databaseType": "sql",
+  "dto": "mapstruct",
+  "embedded": false,
+  "entityTableName": "nha_cung_cap",
+  "fields": [
+    {
+      "fieldName": "tenNCC",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "soDT",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "email",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "diaChi",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "ghiChu",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "microserviceName": "LVProject",
+  "name": "NhaCungCap",
+  "pagination": "infinite-scroll",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "nguyenLieu",
+      "otherEntityRelationshipName": "nhaCungCap",
+      "relationshipName": "nguyenLieu",
+      "relationshipType": "one-to-many"
+    },
+    {
+      "otherEntityName": "phieuNhap",
+      "otherEntityRelationshipName": "nhaCungCap",
+      "relationshipName": "phieuNhap",
+      "relationshipType": "one-to-many"
+    },
+    {
+      "otherEntityName": "donNhap",
+      "otherEntityRelationshipName": "nhaCungCap",
+      "relationshipName": "donNhap",
+      "relationshipType": "one-to-many"
+    },
+    {
+      "otherEntityName": "donXuat",
+      "otherEntityRelationshipName": "nhaCungCap",
+      "relationshipName": "donXuat",
+      "relationshipType": "one-to-many"
+    }
+  ],
+  "service": "serviceClass"
+}

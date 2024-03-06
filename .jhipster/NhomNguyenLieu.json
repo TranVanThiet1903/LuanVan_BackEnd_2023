@@ -1,0 +1,31 @@
+{
+  "applications": ["LVProject"],
+  "changelogDate": "20231017160228",
+  "clientRootFolder": "LVProject",
+  "databaseType": "sql",
+  "dto": "mapstruct",
+  "embedded": false,
+  "entityTableName": "nhom_nguyen_lieu",
+  "fields": [
+    {
+      "fieldName": "tenNhom",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "microserviceName": "LVProject",
+  "name": "NhomNguyenLieu",
+  "pagination": "infinite-scroll",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "nguyenLieu",
+      "otherEntityRelationshipName": "nhomNguyenLieu",
+      "relationshipName": "nguyenLieu",
+      "relationshipType": "one-to-many"
+    }
+  ],
+  "service": "serviceClass"
+}

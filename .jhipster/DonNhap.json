@@ -1,0 +1,89 @@
+{
+  "applications": ["LVProject"],
+  "changelogDate": "20231017160828",
+  "clientRootFolder": "LVProject",
+  "databaseType": "sql",
+  "dto": "mapstruct",
+  "embedded": false,
+  "entityTableName": "don_nhap",
+  "fields": [
+    {
+      "fieldName": "ngayLap",
+      "fieldType": "Instant",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "tongTienHang",
+      "fieldType": "Long",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "vAT",
+      "fieldType": "Long",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "phiShip",
+      "fieldType": "Long",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "giamGia",
+      "fieldType": "Long",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "tongTienThanhToan",
+      "fieldType": "Long",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "tienNo",
+      "fieldType": "Long",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "ghiChu",
+      "fieldType": "String"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "microserviceName": "LVProject",
+  "name": "DonNhap",
+  "pagination": "infinite-scroll",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "chiTietDonNhap",
+      "otherEntityRelationshipName": "donNhap",
+      "relationshipName": "chiTietDonNhap",
+      "relationshipType": "one-to-many"
+    },
+    {
+      "otherEntityName": "nhaCungCap",
+      "otherEntityRelationshipName": "donNhap",
+      "relationshipName": "nhaCungCap",
+      "relationshipType": "many-to-one"
+    },
+    {
+      "otherEntityName": "phieuNhap",
+      "otherEntityRelationshipName": "donNhap",
+      "relationshipName": "phieuNhap",
+      "relationshipType": "many-to-one"
+    },
+    {
+      "otherEntityName": "nhaKho",
+      "otherEntityRelationshipName": "donNhap",
+      "relationshipName": "nhaKho",
+      "relationshipType": "many-to-one"
+    },
+    {
+      "otherEntityName": "taiKhoan",
+      "otherEntityRelationshipName": "donNhap",
+      "relationshipName": "taiKhoan",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "service": "serviceClass"
+}

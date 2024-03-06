@@ -1,0 +1,37 @@
+{
+  "applications": ["LVProject"],
+  "changelogDate": "20231017160528",
+  "clientRootFolder": "LVProject",
+  "databaseType": "sql",
+  "dto": "mapstruct",
+  "embedded": false,
+  "entityTableName": "chi_tiet_kho",
+  "fields": [
+    {
+      "fieldName": "soLuong",
+      "fieldType": "Long",
+      "fieldValidateRules": ["required"]
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "microserviceName": "LVProject",
+  "name": "ChiTietKho",
+  "pagination": "infinite-scroll",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "nhaKho",
+      "otherEntityRelationshipName": "chiTietKho",
+      "relationshipName": "nhaKho",
+      "relationshipType": "many-to-one"
+    },
+    {
+      "otherEntityName": "nguyenLieu",
+      "otherEntityRelationshipName": "chiTietKho",
+      "relationshipName": "nguyenLieu",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "service": "serviceClass"
+}

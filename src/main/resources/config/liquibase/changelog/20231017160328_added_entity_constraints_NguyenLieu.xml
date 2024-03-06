@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-latest.xsd">
+    <!--
+        Added the constraints for entity NguyenLieu.
+    -->
+    <changeSet id="20231017160328-2" author="jhipster">
+
+        <addForeignKeyConstraint baseColumnNames="nhom_nguyen_lieu_id"
+                                 baseTableName="nguyen_lieu"
+                                 constraintName="fk_nguyen_lieu__nhom_nguyen_lieu_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="nhom_nguyen_lieu"/>
+
+        <addForeignKeyConstraint baseColumnNames="nha_cung_cap_id"
+                                 baseTableName="nguyen_lieu"
+                                 constraintName="fk_nguyen_lieu__nha_cung_cap_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="nha_cung_cap"/>
+    </changeSet>
+</databaseChangeLog>

@@ -1,0 +1,63 @@
+{
+  "applications": ["LVProject"],
+  "changelogDate": "20231017160028",
+  "clientRootFolder": "LVProject",
+  "databaseType": "sql",
+  "dto": "mapstruct",
+  "embedded": false,
+  "entityTableName": "tai_khoan",
+  "fields": [
+    {
+      "fieldName": "hoTen",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "username",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "password",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "ngayTao",
+      "fieldType": "Instant",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "salt",
+      "fieldType": "Long",
+      "fieldValidateRules": ["required"]
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "microserviceName": "LVProject",
+  "name": "TaiKhoan",
+  "pagination": "infinite-scroll",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "phieuNhap",
+      "otherEntityRelationshipName": "taiKhoan",
+      "relationshipName": "phieuNhap",
+      "relationshipType": "one-to-many"
+    },
+    {
+      "otherEntityName": "donNhap",
+      "otherEntityRelationshipName": "taiKhoan",
+      "relationshipName": "donNhap",
+      "relationshipType": "one-to-many"
+    },
+    {
+      "otherEntityName": "donXuat",
+      "otherEntityRelationshipName": "taiKhoan",
+      "relationshipName": "donXuat",
+      "relationshipType": "one-to-many"
+    }
+  ],
+  "service": "serviceClass"
+}

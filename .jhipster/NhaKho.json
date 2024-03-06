@@ -1,0 +1,64 @@
+{
+  "applications": ["LVProject"],
+  "changelogDate": "20231017160428",
+  "clientRootFolder": "LVProject",
+  "databaseType": "sql",
+  "dto": "mapstruct",
+  "embedded": false,
+  "entityTableName": "nha_kho",
+  "fields": [
+    {
+      "fieldName": "tenKho",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "diaChi",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "loai",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "ngayTao",
+      "fieldType": "Instant",
+      "fieldValidateRules": ["required"]
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "microserviceName": "LVProject",
+  "name": "NhaKho",
+  "pagination": "infinite-scroll",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "chiTietKho",
+      "otherEntityRelationshipName": "nhaKho",
+      "relationshipName": "chiTietKho",
+      "relationshipType": "one-to-many"
+    },
+    {
+      "otherEntityName": "phieuNhap",
+      "otherEntityRelationshipName": "nhaKho",
+      "relationshipName": "phieuNhap",
+      "relationshipType": "one-to-many"
+    },
+    {
+      "otherEntityName": "donNhap",
+      "otherEntityRelationshipName": "nhaKho",
+      "relationshipName": "donNhap",
+      "relationshipType": "one-to-many"
+    },
+    {
+      "otherEntityName": "donXuat",
+      "otherEntityRelationshipName": "nhaKho",
+      "relationshipName": "donXuat",
+      "relationshipType": "one-to-many"
+    }
+  ],
+  "service": "serviceClass"
+}

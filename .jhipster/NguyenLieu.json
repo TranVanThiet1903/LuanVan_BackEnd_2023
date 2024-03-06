@@ -1,0 +1,86 @@
+{
+  "applications": ["LVProject"],
+  "changelogDate": "20231017160328",
+  "clientRootFolder": "LVProject",
+  "databaseType": "sql",
+  "dto": "mapstruct",
+  "embedded": false,
+  "entityTableName": "nguyen_lieu",
+  "fields": [
+    {
+      "fieldName": "hinhAnh",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "tenNguyenLieu",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "giaNhap",
+      "fieldType": "Long",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "moTa",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "donViTinh",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "vAT",
+      "fieldType": "Long",
+      "fieldValidateRules": ["required"]
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "microserviceName": "LVProject",
+  "name": "NguyenLieu",
+  "pagination": "infinite-scroll",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "chiTietKho",
+      "otherEntityRelationshipName": "nguyenLieu",
+      "relationshipName": "chiTietKho",
+      "relationshipType": "one-to-many"
+    },
+    {
+      "otherEntityName": "chiTietPhieuNhap",
+      "otherEntityRelationshipName": "nguyenLieu",
+      "relationshipName": "chiTietPhieuNhap",
+      "relationshipType": "one-to-many"
+    },
+    {
+      "otherEntityName": "chiTietDonNhap",
+      "otherEntityRelationshipName": "nguyenLieu",
+      "relationshipName": "chiTietDonNhap",
+      "relationshipType": "one-to-many"
+    },
+    {
+      "otherEntityName": "chiTietDonXuat",
+      "otherEntityRelationshipName": "nguyenLieu",
+      "relationshipName": "chiTietDonXuat",
+      "relationshipType": "one-to-many"
+    },
+    {
+      "otherEntityName": "nhomNguyenLieu",
+      "otherEntityRelationshipName": "nguyenLieu",
+      "relationshipName": "nhomNguyenLieu",
+      "relationshipType": "many-to-one"
+    },
+    {
+      "otherEntityName": "nhaCungCap",
+      "otherEntityRelationshipName": "nguyenLieu",
+      "relationshipName": "nhaCungCap",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "service": "serviceClass"
+}
